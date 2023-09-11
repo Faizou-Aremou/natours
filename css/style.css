@@ -29,4 +29,30 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-box,
+.header-button {
+  padding: 2.5rem;
+}
+.logo {
+  height: 2.188rem;
+}
+.heading-primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-primary-main {
+}
+.heading-primary-sub {
 }
