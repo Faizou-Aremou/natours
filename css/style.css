@@ -38,9 +38,10 @@ body {
   justify-content: space-between;
 }
 
-.logo-box,
-.header-button {
-  padding: 2.5rem;
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 .logo {
   height: 2.188rem;
@@ -55,7 +56,8 @@ body {
 .heading-primary {
   color: white;
   text-transform: uppercase;
-  backface-visibility:hidden
+  backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -109,4 +111,26 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+.btn-container{
+  text-align: center;
+}
+.btn-link:link,
+.btn-link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 15px 40px;
+}
+.btn {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
