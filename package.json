@@ -4,8 +4,8 @@
   "description": "this project is train css for udemy course  **course advanced css course** from Jonas Schmedtmann",
   "main": "index.js",
   "scripts": {
-    "start":"live-server",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "start": "live-server",
+    "compile:sass": "sass --watch sass/main.scss css/style.css"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Faizou-Aremou/natours#readme",
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "node-sass": "^9.0.0"
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
   }
 }

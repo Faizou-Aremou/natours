@@ -3,3 +3,19 @@
 it is use for low level styles such as: reset, or styles for HTML and body elements selectors 
 
 */
+
+:root {
+  // this define what 1 rem is
+  font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
