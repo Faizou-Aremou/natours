@@ -167,6 +167,18 @@ body {
   text-align: center;
 }
 
+.grid-test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8rem;
+}
+.grid-test .row {
+  flex: 1 0 auto;
+  max-width: 114rem;
+  background-color: #eee;
+}
+
 .logo-heading {
   display: flex;
   justify-content: space-between;
