@@ -176,6 +176,7 @@ body {
 .grid-test .row {
   flex: 1 0 auto;
   max-width: 114rem;
+  width: 100%;
   background-color: #eee;
 }
 

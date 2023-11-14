@@ -7,6 +7,7 @@
   .row {
     flex: 1 0 auto;
     max-width: variables.$grid-row-width;
+    width:100%;
     background-color: #eee;
   }
 }
