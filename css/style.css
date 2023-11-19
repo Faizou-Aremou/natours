@@ -181,18 +181,25 @@ body {
   column-gap: 6rem;
 }
 .grid-test .row .col-1-of-2 {
-  flex: 1 1 54rem;
+  flex: 1 1 calc((100% - 6rem) / 2);
 }
 .grid-test .row .col-1-of-3 {
-  flex: 1 1 34rem;
+  flex: 1 1 calc((100% - 12rem) / 3);
 }
 .grid-test .row .col-2-of-3 {
-  flex: 1 1 74rem;
+  flex: 1 1 calc(100% - 6rem - (100% - 12rem) / 3);
+}
+.grid-test .row .col-1-of-4 {
+  flex: 1 1 calc((100% - 18rem) / 4);
+}
+.grid-test .row .col-2-of-4 {
+  flex: 1 1 calc(100% - 12rem - (100% - 18rem) / 4 * 2);
+}
+.grid-test .row .col-3-of-4 {
+  flex: 1 1 calc(100% - 6rem - (100% - 18rem) / 4);
 }
 
-.grid-test .row .col-1-of-3,
-.grid-test .row .col-1-of-2,
-.grid-test .row .col-2-of-3 {
+.grid-test .row [class^=col-] {
   background-color: orangered;
 }
 

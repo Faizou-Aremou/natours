@@ -11,34 +11,42 @@
     background-color: #eee;
     column-gap: variables.$gutter-horizontal;
 
-    .col-1-of-3,
-    .col-1-of-2,
-    .col-2-of-3 {
+    [class^='col-'] {
       @extend %col-color;
     }
+
     .col-1-of-2 {
-      flex: 1 1
-        calc(calc(variables.$grid-row-width - variables.$gutter-horizontal) / 2);
+      flex: 1 1 calc((100% - variables.$gutter-horizontal) / 2);
     }
 
     .col-1-of-3 {
-      flex: 1 1
-        calc(
-          calc(
-              variables.$grid-row-width - calc(variables.$gutter-horizontal * 2)
-            ) / 3
-        );
+      flex: 1 1 calc((100% - (variables.$gutter-horizontal * 2)) / 3);
     }
     .col-2-of-3 {
       flex: 1 1
         calc(
-          calc(variables.$grid-row-width - variables.$gutter-horizontal) -
-            calc(
-              calc(
-                  variables.$grid-row-width -
-                    calc(variables.$gutter-horizontal * 2)
-                ) / 3
-            )
+          (100% - variables.$gutter-horizontal) -
+            ((100% - (variables.$gutter-horizontal * 2)) / 3)
+        );
+    }
+
+    .col-1-of-4 {
+      flex: 1 1 calc((100% - (variables.$gutter-horizontal * 3)) / 4);
+    }
+
+    .col-2-of-4 {
+      flex: 1 1
+        calc(
+          (100% - (variables.$gutter-horizontal * 2)) -
+            (((100% - (variables.$gutter-horizontal * 3)) / 4) * 2)
+        );
+    }
+
+    .col-3-of-4 {
+      flex: 1 1
+        calc(
+          (100% - (variables.$gutter-horizontal)) -
+            ((100% - (variables.$gutter-horizontal * 3)) / 4)
         );
     }
   }
