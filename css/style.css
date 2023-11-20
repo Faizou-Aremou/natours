@@ -203,6 +203,10 @@ body {
   background-color: orangered;
 }
 
+.section-about {
+  background-color: #f7f7f7;
+}
+
 .logo-heading {
   display: flex;
   justify-content: space-between;
