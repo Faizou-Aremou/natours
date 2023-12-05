@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as variables;
 
+
 .heading-primary {
   color: variables.$color-white;
   text-transform: uppercase;
@@ -47,6 +48,13 @@
   }
 }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -54,4 +62,8 @@ body {
   line-height: 1.7;
   color: variables.$color-grey-dark;
   padding: 1.875rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
 }
