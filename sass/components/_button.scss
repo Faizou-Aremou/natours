@@ -56,3 +56,15 @@
     animation: moveFromBottom 0.5s ease-out 0.75s backwards;
   }
 }
+
+.btn-text {
+  &:link {
+  }
+  &:visited {
+  }
+  &:hover {
+  }
+
+  &:active {
+  }
+}
