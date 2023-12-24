@@ -48,7 +48,7 @@
 }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: variables.$default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: variables.$default-font-size;
   &:not(:last-of-type) {
     margin-bottom: 3rem;
   }
