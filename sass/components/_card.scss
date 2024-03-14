@@ -3,11 +3,10 @@
   // Animations
   perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
   &__side {
-    color: white;
     font-size: 2rem;
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -79,12 +78,26 @@
     &--1 {
       background-image: linear-gradient(
         to right bottom,
-        rgba(variables.$color-secondary-light, .85),
-        rgba(variables.$color-secondary-dark, .85)
+        rgba(variables.$color-secondary-light, 0.85),
+        rgba(variables.$color-secondary-dark, 0.85)
       );
     }
   }
-  &__details{
-    
+}
+
+.card-details {
+  padding: 3rem;
+  &__list-container {
+    list-style: none;
+    width: 80%;
+    margin:0 auto;
+  }
+  &__list-item {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid variables.$color-grey-light-2;
+    }
   }
 }

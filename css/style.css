@@ -210,12 +210,11 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 }
 .card__side {
-  color: white;
   font-size: 2rem;
-  height: 50rem;
+  height: 52rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -274,6 +273,24 @@ body {
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
+
+.card-details {
+  padding: 3rem;
+}
+.card-details__list-container {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-details__list-item {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card-details__list-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
 .composition {
   position: relative;
 }
