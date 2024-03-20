@@ -83,6 +83,13 @@
       );
     }
   }
+  // BACK SIDE Styling
+  &__cta {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .card-details {
@@ -90,7 +97,7 @@
   &__list-container {
     list-style: none;
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
   }
   &__list-item {
     text-align: center;
