@@ -6,6 +6,7 @@
   position: relative;
   font-size: variables.$default-font-size;
   border: 0px;
+  text-decoration: none;
 
   &__container {
     text-align: center;
@@ -50,6 +51,13 @@
     color: variables.$color-grey-dark;
     &::after {
       background-color: variables.$color-white;
+    }
+  }
+  &--green {
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    &::after {
+      background-color: variables.$color-primary;
     }
   }
   &--animated {

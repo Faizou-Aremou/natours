@@ -134,6 +134,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .btn {
   padding: 1.5rem 4rem;
   border-radius: 10rem;
@@ -141,6 +145,7 @@ body {
   position: relative;
   font-size: 1.6rem;
   border: 0px;
+  text-decoration: none;
 }
 .btn__container {
   text-align: center;
@@ -182,6 +187,13 @@ body {
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn--animated {
   animation: moveFromBottom 0.5s ease-out 0.75s backwards;
