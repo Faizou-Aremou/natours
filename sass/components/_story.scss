@@ -11,6 +11,15 @@
   &__shape {
     width: 15rem;
     height: 15rem;
+    float: left;
     background-color: orangered;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
   }
 }
+
+/**
+   shape-outside is about how to put text around form.
+   clip-path vs border-radius for transforming element to elipsique (circle or others) form
+
+**/
