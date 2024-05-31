@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: variables.$gutter-vertical;
+  row-gap: variables.$gutter-horizontal;
 }
 .row {
   display: flex;
   max-width: variables.$grid-row-width;
   width: 100%;
-  column-gap: variables.$gutter-horizontal;
+  column-gap: variables.$gutter-vertical;
   margin: auto;
 }
 
