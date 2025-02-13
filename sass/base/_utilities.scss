@@ -4,8 +4,11 @@
 .u-margin-bottom-small {
   margin-bottom: 1.5rem;
 }
+/*
+ Selon le formateur c'est une pratique très courante que d'ajouter important aux classes utilitaires
+*/
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 .u-margin-bottom-big {
   margin-bottom: 8rem;

@@ -1,0 +1,98 @@
+@use '../abstracts/variables' as variables;
+/**
+visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois.
+*/
+.form {
+  &__group:not(:last-child) {
+    margin-block-end: 2rem;
+  }
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(variables.$color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+
+    &::-webkit-input-placeholder {
+      color: variables.$color-grey-dark-2;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.1);
+      border-bottom: 3px solid variables.$color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid variables.$color-secondary-dark;
+    }
+  }
+
+  // ~ general sibling
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-inline-start: 2rem;
+    margin-block-start: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+  &__radio-input {
+    display: none;
+  }
+  &__radio-label {
+    font-size: variables.$default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-inline-start: 4.5rem;
+    position: relative;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid variables.$color-primary;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -0.4rem;
+    // ::after marche très bien ici aussi!
+    &::before {
+      content: '';
+      height: 1.3rem;
+      width: 1.3rem;
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // très sincèrement, le fait qu'on soit obligé d'ajouter cette propriété css n'est pas très claire pour moi.
+      background-color: variables.$color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+  // l'opérateur + très important il permet de selectionner un element frere ajacent à un autre, 
+  // on a aussi l'opérateur ~ qui permet de selectionner un frere à un autre
+  &__radio-input:checked + &__radio-label &__radio-button::before{
+    opacity: 1;
+  }
+}
