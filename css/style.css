@@ -146,6 +146,12 @@ body {
   margin-top: 10rem;
 }
 
+.u-center, .navigation__list {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
   padding: 1.5rem 4rem;
   border-radius: 10rem;
@@ -667,6 +673,76 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
 
 .col-3-of-4 {
   flex: 1 1 calc(100% - 6rem - (100% - 18rem) / 4);
+}
+
+/**
+- What the "checkbox hack" is and how it works;
+- How to create custom animation timing functions using cubic bezier curve
+- how to animate "solid-color gradients"
+- how and why to use transform-origin
+- In general: create an amazingly creative effect!
+*/
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2000;
+  text-align: center;
+}
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #25b485);
+  z-index: 1000;
+  transform: scale(80);
+}
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+}
+.navigation__list {
+  position: absolute;
+  text-align: center;
+  list-style: none;
+}
+.navigation__item {
+  margin: 1rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 240%;
+  transition: all 0.4s;
+  display: inline-block;
+}
+.navigation__link:link span, .navigation__link:visited span {
+  margin-inline-end: 1.5rem;
+  display: inline-block;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem);
 }
 
 .section-about {

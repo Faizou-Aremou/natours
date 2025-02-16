@@ -1,0 +1,100 @@
+@use '../abstracts/variables' as variables;
+@forward '../base/utilities';
+/**
+- What the "checkbox hack" is and how it works;
+- How to create custom animation timing functions using cubic bezier curve
+- how to animate "solid-color gradients"
+- how and why to use transform-origin
+- In general: create an amazingly creative effect!
+*/
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: variables.$color-white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    text-align: center;
+  }
+
+  &__navi-toggle {
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(
+      variables.$color-primary-light,
+      variables.$color-primary-dark
+    );
+    z-index: 1000;
+    transform: scale(80);
+  }
+  &__nav {
+    // opacity: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+  }
+  &__checkbox:checked ~ &__background {
+  }
+  &__checkbox:checked ~ &__nav {
+  }
+  &__list {
+    position: absolute;
+    @extend .u-center;
+    text-align: center;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: variables.$color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        variables.$color-white 50%
+      );
+      background-size: 240%;
+      transition: all 0.4s;
+      display: inline-block;
+
+      span {
+        margin-inline-end: 1.5rem;
+        display:inline-block
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: variables.$color-primary;
+      transform: translateX(1rem);
+    }
+  }
+}
