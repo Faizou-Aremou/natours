@@ -33,4 +33,8 @@ it is use for low level styles such as: reset, or styles for HTML and body eleme
 
 body {
   box-sizing: border-box;
+  padding: 1.875rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

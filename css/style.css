@@ -86,6 +86,12 @@ it is use for low level styles such as: reset, or styles for HTML and body eleme
 
 body {
   box-sizing: border-box;
+  padding: 1.875rem;
+}
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 0;
+  }
 }
 
 .heading-primary {
@@ -103,6 +109,12 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
+@media only screen and (max-width: 600px) {
+  .heading-primary--main {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -111,6 +123,11 @@ body {
   animation-name: moveFromRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+}
+@media only screen and (max-width: 600px) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -128,6 +145,16 @@ body {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 900px) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -141,7 +168,6 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: #777;
-  padding: 1.875rem;
 }
 
 .paragraph {
@@ -751,29 +777,48 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   column-gap: 8rem;
   margin: auto;
 }
+@media only screen and (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    row-gap: 4rem;
+    column-gap: 0;
+  }
+}
 
 .col-1-of-2 {
-  flex: 1 1 calc((100% - 6rem) / 2);
+  flex: 1 1 auto;
+  width: calc((100% - 6rem) / 2);
 }
 
 .col-1-of-3 {
-  flex: 1 1 calc((100% - 12rem) / 3);
+  flex: 1 1 auto;
+  width: calc((100% - 12rem) / 3);
 }
 
 .col-2-of-3 {
-  flex: 1 1 calc(100% - 6rem - (100% - 12rem) / 3);
+  flex: 1 1 auto;
+  width: calc(100% - 6rem - (100% - 12rem) / 3);
 }
 
 .col-1-of-4 {
-  flex: 1 1 calc((100% - 18rem) / 4);
+  flex: 1 1 auto;
+  width: calc((100% - 18rem) / 4);
 }
 
 .col-2-of-4 {
-  flex: 1 1 calc(100% - 12rem - (100% - 18rem) / 4 * 2);
+  flex: 1 1 auto;
+  width: calc(100% - 12rem - (100% - 18rem) / 4 * 2);
 }
 
 .col-3-of-4 {
-  flex: 1 1 calc(100% - 6rem - (100% - 18rem) / 4);
+  flex: 1 1 auto;
+  width: calc(100% - 6rem - (100% - 18rem) / 4);
+}
+
+@media only screen and (max-width: 900px) {
+  [class^=col-] {
+    width: 100%;
+  }
 }
 
 /**
