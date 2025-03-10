@@ -10,12 +10,13 @@
   display: flex;
   max-width: variables.$grid-row-width;
   width: 100%;
-  column-gap: variables.$gutter-vertical;
+  gap: variables.$gutter-vertical; // Should be gutter horizontal
   margin: auto;
   @include respond(tab-port) {
     flex-direction: column;
-    row-gap: variables.$gutter-vertical-small;
-    column-gap: 0;
+    gap: variables.$gutter-vertical-small;
+    max-width: variables.$grid-row-small-width;
+    padding: 0 3rem;
   }
 }
 

@@ -701,6 +701,11 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 600px) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -722,6 +727,11 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   padding: 10rem 0;
   font-size: 1.4rem;
 }
+@media only screen and (max-width: 900px) {
+  .footer {
+    padding: 8rem 0;
+  }
+}
 .footer__logo-box {
   text-align: center;
   margin-block-end: 8rem;
@@ -733,6 +743,12 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   border-block-start: 1px solid #eee;
   padding: 2rem;
   display: inline-block;
+}
+@media only screen and (max-width: 900px) {
+  .footer__navigation {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer__list {
   list-style: none;
@@ -762,6 +778,13 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   width: 80%;
   float: right;
 }
+@media only screen and (max-width: 900px) {
+  .footer__copyright {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+}
 
 .grid-test {
   display: flex;
@@ -774,14 +797,15 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   display: flex;
   max-width: 114rem;
   width: 100%;
-  column-gap: 8rem;
+  gap: 8rem;
   margin: auto;
 }
 @media only screen and (max-width: 900px) {
   .row {
     flex-direction: column;
-    row-gap: 4rem;
-    column-gap: 0;
+    gap: 4rem;
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 
@@ -845,6 +869,18 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   text-align: center;
   cursor: pointer;
 }
+@media only screen and (max-width: 900px) {
+  .navigation__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -855,6 +891,18 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   background-image: radial-gradient(#7ed56f, #25b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+@media only screen and (max-width: 600px) {
+  .navigation__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 .navigation__nav {
   opacity: 0;
