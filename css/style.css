@@ -662,6 +662,18 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   font-size: 1.6rem;
   transform: skew(-12deg);
 }
+@media only screen and (max-width: 900px) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .story {
+    transform: skewX(0);
+  }
+}
 .story__shape {
   width: 15rem;
   height: 15rem;
@@ -673,6 +685,11 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   transform: translateX(-3rem) skew(12deg);
   position: relative;
 }
+@media only screen and (max-width: 600px) {
+  .story__shape {
+    transform: translate(-3rem) skewX(0);
+  }
+}
 .story__img {
   height: 100%;
   transform: translateX(-4rem) scale(1.4);
@@ -681,6 +698,11 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
 }
 .story__text {
   transform: skew(12deg);
+}
+@media only screen and (max-width: 600px) {
+  .story__text {
+    transform: skewX(0);
+  }
 }
 .story__caption {
   position: absolute;
@@ -1145,11 +1167,30 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 50rem;
+}
+@media only screen and (max-width: 1200px) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../../img/nat-10.jpg);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../../img/nat-10.jpg);
+  }
 }
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+@media only screen and (max-width: 1200px) {
+  .book__form {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .book__form {
+    width: 100%;
+  }
 }
 
 .logo-heading {
