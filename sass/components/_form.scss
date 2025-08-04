@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as *;
 /**
-visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois.
+visibility: 0; cache l'élément sans supprimer l'espace qu'il occupait autrefois.
 */
 .form {
   &__group:not(:last-child) {
@@ -15,12 +16,16 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
     background-color: rgba(variables.$color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
-    width: 100%;
+    width: 90%;
     display: block;
     transition: all 0.3s;
 
     &::-webkit-input-placeholder {
       color: variables.$color-grey-dark-2;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
     }
 
     &:focus {
@@ -53,6 +58,11 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &__radio-input {
     display: none;
@@ -84,15 +94,18 @@ visibility: 0; cache l'élément sans suprimer l'espace qu'il occupait autrefois
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); // très sincèrement, le fait qu'on soit obligé d'ajouter cette propriété css n'est pas très claire pour moi.
+      transform: translate(
+        -50%,
+        -50%
+      ); // très sincèrement, le fait qu'on soit obligé d'ajouter cette propriété css n'est pas très claire pour moi.
       background-color: variables.$color-primary;
       opacity: 0;
       transition: opacity 0.2s;
     }
   }
-  // l'opérateur + très important il permet de selectionner un element frere ajacent à un autre, 
+  // l'opérateur + très important il permet de selectionner un element frere ajacent à un autre,
   // on a aussi l'opérateur ~ qui permet de selectionner un frere à un autre
-  &__radio-input:checked + &__radio-label &__radio-button::before{
+  &__radio-input:checked + &__radio-label &__radio-button::before {
     opacity: 1;
   }
 }
