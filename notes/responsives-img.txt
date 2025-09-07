@@ -1,0 +1,8 @@
+1- Résolution switching:
+2- Density switching: difficulté plus faible =>  meme version d'image=> version plus dense pour les larges sreen et moins dense pour les petits screens
+    srcset
+3- Art direction: 
+        <picture class="footer__logo">
+            <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 600px)">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" >
+          </picture>
